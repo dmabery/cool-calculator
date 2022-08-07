@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Wrapper from "./components/Wrapper";
 import Screen from "./components/Screen";
 import ButtonBox from "./components/ButtonBox";
@@ -14,7 +13,7 @@ const btnValues = [
 ];
 
 const toLocaleString = (num) =>
-  String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, "$1 ");
+  String(num).replace(/(?:\/)([^#]+)(?=#|$)/g, "$1 ");
 
 const removeSpaces = (num) => num.toString().replace(/\s/g, "");
 
